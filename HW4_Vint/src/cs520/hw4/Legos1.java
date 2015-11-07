@@ -1,0 +1,88 @@
+package cs520.hw4;
+
+import javax.swing.JFrame;
+
+import java.awt.Color;
+import java.awt.Graphics;
+
+public class Legos1 extends JFrame {
+	
+	//Declare the object's instance variables; The first two values represent the top-left coordinates 
+	//of the first red block in the bottom row. The next two values are the 
+	//width and height of each block. 
+	int startX, startY, legoWidth, legoHeight;
+	
+	//Represents number of blocks in bottom row
+	int baseLength;
+	
+	public Legos1(){
+		
+		super("Vint's LEGO's");
+		startX = 20;
+		startY = 300;
+		legoWidth = 50;
+		legoHeight = 20;
+		baseLength = 10;
+		
+	}
+	
+	public void paint(Graphics g){
+		
+		super.paint(g);
+		
+		//startX increases by 10 each square, startY decreases
+		//by 20 each row
+		
+		//for loop tracks the row
+		for (int row = 0; row < baseLength; row++){
+			
+			//initial color is red
+			g.setColor(Color.RED);
+			
+			//color index alternates between 0 and 1 to track if the color
+			//should be blue or red
+			int colorIndex = 0;
+			
+			//tracks number of vlocks on the current row
+			int numBlocks = baseLength - row;
+			
+			//yIndex maintains y coordinate for current rectangle
+			int yIndex = startY - (legoHeight * row);
+			
+			//rowStart maintains the x coordinate of first rectangle in 
+			//the current row
+			int rowStart = startX + ((legoWidth / 2) * row);
+			
+			//nested while loop to actually create rectangles
+			while (numBlocks > 0){
+				
+				//create rectangle and then update index variables
+				g.fillRoundRect(rowStart, yIndex, legoWidth, legoHeight, 2, 2);
+				numBlocks--;
+				rowStart += legoWidth;
+				
+				//if-else statement to maintain color alternations
+				if (colorIndex == 1){
+					g.setColor(Color.RED);
+					colorIndex--;
+				}
+				else {
+					g.setColor(Color.BLUE);
+					colorIndex++;
+				}
+			}
+		}
+	}
+	
+	public static void main(String[] args){
+		
+		//Create lego pyramid object
+		Legos1 legoTest = new Legos1();
+		legoTest.setSize(550, 325);
+		legoTest.setVisible(true);
+		
+		//close properly
+		legoTest.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE );
+	}
+
+}

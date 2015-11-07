@@ -1,0 +1,68 @@
+package cs520.hw4;
+
+import javax.swing.JFrame;
+
+import java.awt.Color;
+import java.awt.Graphics;
+
+public class Legos1 extends JFrame {
+	
+	//Declare the object's instance variables; The first two values represent the top-left coordinates 
+	//of the first red block in the bottom row. The next two values are the 
+	//width and height of each block. 
+	int startX, startY, legoWidth, legoHeight;
+	
+	//Represents number of blocks in bottom row
+	int baseLength;
+	
+	public Legos1(){
+		
+		super("Vint's LEGO's");
+		startX = 20;
+		startY = 300;
+		legoWidth = 50;
+		legoHeight = 20;
+		baseLength = 10;
+		
+	}
+	
+	public void paint(Graphics g){
+		
+		super.paint(g);
+		
+		//startX increases by 10 each square, startY decreases
+		//by 20 each row
+		
+		int numBlocks = baseLength;
+		
+		
+		for (int row = 0; row < baseLength; row++){
+			g.setColor(Color.RED);
+			int colorIndex = 0;
+			
+			int yIndex = startY - (legoHeight * row);
+			while (numBlocks > 0){
+				
+				int xIndex = startX + ((baseLength - numBlocks) * legoWidth);
+				g.fillRect(xIndex, yIndex, legoWidth, legoHeight);
+				numBlocks--;
+				
+				if (colorIndex == 1){
+					g.setColor(Color.RED);
+					colorIndex--;
+				}
+				else {
+					g.setColor(Color.BLUE);
+					colorIndex++;
+				}
+			}
+		}
+	}
+	
+	public static void main(String[] args){
+		Legos1 legoTest = new Legos1();
+		legoTest.setSize(550, 325);
+		legoTest.setVisible(true);
+	}
+
+}

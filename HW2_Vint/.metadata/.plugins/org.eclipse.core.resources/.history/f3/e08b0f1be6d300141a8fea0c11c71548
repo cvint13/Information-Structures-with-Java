@@ -1,0 +1,23 @@
+package cs520.hw2.pt2;
+
+public class OnlineCourse extends Course {
+
+	private int technologyFee;
+	
+	//OnlineCourse constructor
+	public OnlineCourse(String courseName, int costPerCredit, 
+			int numberOfCredits, int technologyFee){
+		
+		super(courseName, costPerCredit, numberOfCredits);
+		this.technologyFee = technologyFee; 
+	}
+	
+	public void setTechnologyFee(int techFee){
+		technologyFee = techFee;
+	}
+	
+	public int getTechnologyFee(){
+		return technologyFee;
+	}
+	
+}

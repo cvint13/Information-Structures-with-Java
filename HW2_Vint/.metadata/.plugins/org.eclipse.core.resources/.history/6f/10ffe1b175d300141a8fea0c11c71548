@@ -1,0 +1,45 @@
+package cs520.hw2.part1;
+
+import javax.swing.JOptionPane;
+
+public class Course {
+	
+	//Create three component variables of the Course object
+	private String courseName;
+	private int costPerCredit;
+	private int numberOfCredits;
+	
+	public void setName(String newName){
+		courseName = newName;
+	}
+	
+	public void setCreditCost(int newCreditCost){
+		costPerCredit = newCreditCost;
+	}
+	
+	public void setNumCredits(int newNumCredits){
+		numberOfCredits = newNumCredits;
+	}
+	
+	public String getName(){
+		return courseName;
+	}
+	
+	public int getCreditCost(){
+		return costPerCredit;
+	}
+	
+	public int getNumCredits(){
+		return numberOfCredits;
+	}
+	
+	public int getTotalTuition(){
+		return numberOfCredits * costPerCredit;
+	}
+	
+	public void printTuitionDetails(){
+		JOptionPane.showMessageDialog(null, "Name of Course: " + courseName 
+				+ "\nCourse tuition: " + getTotalTuition());
+	}
+
+}

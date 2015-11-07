@@ -1,0 +1,25 @@
+package cs520.hw2.part1;
+
+import javax.swing.JOptionPane;
+
+public class TuitionObjectStyle {
+	
+	public static void main(String[] args){
+		
+		//Create the two course objects
+		Course course1 = new Course();
+		Course course2 = new Course();
+		
+		//Create the variables for which the user will set their values
+		String courseName1, courseName2;
+		int numCredits1, numCredits2;
+		int costPerCredit1, costPerCredit2;
+		
+		courseName1 = JOptionPane.showInputDialog("Enter the name of the first course: ");
+		
+		numCredits1 = Integer.parseInt(JOptionPane.showInputDialog("Enter the number of credits"
+				+ "for this course: "));
+		
+	}
+
+}

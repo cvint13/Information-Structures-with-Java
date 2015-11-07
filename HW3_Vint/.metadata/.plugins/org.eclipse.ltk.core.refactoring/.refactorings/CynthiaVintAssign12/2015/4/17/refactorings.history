@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;CynthiaVintAssign12/src/RectangleSkeleton.java&apos; to &apos;Rectangle.java&apos;" description="Rename resource &apos;RectangleSkeleton.java&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/RectangleSkeleton.java" name="Rectangle.java" stamp="1429560759247" updateReferences="true"/>
+</session>

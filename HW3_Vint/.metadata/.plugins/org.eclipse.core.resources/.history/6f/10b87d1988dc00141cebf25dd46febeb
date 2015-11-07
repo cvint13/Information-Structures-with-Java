@@ -1,0 +1,33 @@
+package cs520.hw4;
+
+import javax.swing.JFrame;
+
+public class Legos1 extends JFrame {
+	
+	//Declare the object's instance variables; The first two values represent the top-left coordinates 
+	//of the first red block in the bottom row. The next two values are the 
+	//width and height of each block. 
+	int startX, startY, legoWidth, legoHeight;
+	
+	//Represents number of blocks in bottom row
+	int baseLength;
+	
+	public Legos1(){
+		
+		super("Vint's LEGO's");
+		startX = 20;
+		startY = 300;
+		legoWidth = 50;
+		legoHeight = 20;
+		baseLength = 10;
+		
+	}
+	
+	public void paint(Graphics g){
+		
+		super.paint(g);
+		
+		
+	}
+
+}

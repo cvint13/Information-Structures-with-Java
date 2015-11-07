@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;CynthiaVintAssign13/src/CynthiaVintRectangleDriver.java&apos; to &apos;CynthiaVintProgram1.java&apos;" description="Rename resource &apos;CynthiaVintRectangleDriver.java&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/CynthiaVintRectangleDriver.java" name="CynthiaVintProgram1.java" stamp="1429584767895" updateReferences="true"/>
+</session>
